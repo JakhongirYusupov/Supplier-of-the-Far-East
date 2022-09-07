@@ -1,0 +1,75 @@
+.clients {
+    &_section {
+        width: 100%;
+        min-height: 917px;
+        display: flex;
+        background: $main_color;
+
+        &_title {
+            max-width: 436px;
+            margin-left: 81px;
+            margin-top: 100px;
+            @include font_styles($title_font, 600, 48px, 125%, $font_color)
+        }
+
+        &_img {
+            width: 100%;
+            max-width: 652px;
+            height: 747px;
+            margin-top: 85px;
+            background-image: url('../../images/clients_section_img.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+@media only screen and (max-width: 1286px) {
+    .clients {
+        .container {
+            padding: 0;
+        }
+
+        &_section {
+            padding: 64px 42px 0px 39px;
+            display: block;
+            background: $main_color;
+
+            &_title {
+                max-width: 328px;
+                margin: 0;
+                font-size: 44px;
+            }
+
+            &_img {
+                max-width: 687px;
+                height: 695px;
+                margin-top: 48px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 664px) {
+    .clients {
+
+        &_section {
+            min-height: 650px;
+            padding: 32px 15px;
+            display: block;
+            background: $main_color;
+
+            &_title {
+                max-width: 100%;
+                font-size: 28px;
+            }
+
+            &_img {
+                max-width: 100%;
+                height: 507px;
+                margin-top: 48px;
+                background-image: url('../../images/clients_section_img-mobile.png');
+            }
+        }
+    }
+}
