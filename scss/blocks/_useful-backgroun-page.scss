@@ -1,0 +1,98 @@
+.useful-box-title {
+    display: none;
+}
+
+.useful-background-page {
+    padding-top: 100px;
+    margin-right: 100px;
+}
+
+.useful-box {
+    max-width: 1441px;
+    height: 453.5px;
+    margin: 0 auto;
+    // padding-right: 100px;
+    display: flex;
+    position: relative;
+
+    &-main {
+        width: 100%;
+        max-width: 971px;
+        height: 100%;
+        background: rgb(11, 117, 114);
+        background: linear-gradient(55deg, rgba(11, 117, 114, 1) 60%, rgba(11, 117, 114, 0.29735644257703087) 60%, rgba(11, 117, 114, 0.29735644257703087) 75%, rgba(11, 117, 114, 0) 75%);
+
+        &-title {
+            max-width: 462px;
+            padding-top: 160px;
+            padding-left: 100px;
+            @include font_styles('Exo 2', 600, 48px, 125%, $font_color);
+        }
+    }
+
+    &-img {
+        width: 100%;
+        max-width: 1140px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        background-image: url('../../images/useful-box-background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .useful-background-page {
+        padding-top: 88px;
+        margin: 0;
+    }
+
+    .useful-box {
+        height: 383px;
+
+        &-main {
+            width: 100%;
+            max-width: 674px;
+            height: 100%;
+            background: rgb(11, 117, 114);
+            background: linear-gradient(50deg, rgba(11, 117, 114, 1) 58%, rgba(11, 117, 114, 0.29735644257703087) 58%, rgba(11, 117, 114, 0.29735644257703087) 68%, rgba(11, 117, 114, 0) 68%);
+
+            &-title {
+                max-width: 373px;
+                padding-top: 130px;
+                padding-left: 39px;
+                font-size: 44px;
+            }
+        }
+
+        &-img {
+            max-width: 846px;
+        }
+    }
+}
+
+
+@media only screen and(max-width:525px) {
+    .useful-box {
+        display: none;
+    }
+
+    .useful-background-page {
+        padding: 0;
+    }
+
+    .useful-box-title {
+        width: 100%;
+        padding: 0 15px;
+        display: block;
+        margin-top: 64px;
+    }
+
+
+    .useful-box-text {
+        @include font_styles('Exo 2', 600, 28px, 125%, $title_color)
+    }
+
+}

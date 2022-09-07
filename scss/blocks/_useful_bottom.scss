@@ -1,0 +1,113 @@
+.useful_bottom {
+    &_list {
+        max-width: 1054px;
+        margin: 72px auto 0px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 447px);
+        grid-template-rows: repeat(2, 80px);
+        justify-content: space-between;
+        row-gap: 62px;
+
+        &_item {
+            max-width: 447px;
+            min-height: 80px;
+            display: flex;
+
+            &_img {
+                width: 80px;
+                height: 80px;
+                margin-right: 40px;
+            }
+
+            &_title {
+                margin-bottom: 10px;
+                @include font_styles('Exo 2', 600, 20px, 135%, $title_color);
+            }
+
+            &_desc {
+                max-width: 291px;
+                @include font_styles('PT Sans', 400, 16px, 150%, $desc_color)
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 994px) {
+    .useful_bottom {
+        .container {
+            padding: 0 39px;
+        }
+
+        &_list {
+            margin: 0;
+            margin-top: 49px;
+            grid-template-columns: repeat(1, 530px);
+            grid-template-rows: repeat(4, 88px);
+            justify-content: none;
+            row-gap: 48px;
+
+            &_item {
+                max-width: 530px;
+                min-height: 88px;
+                display: flex;
+
+                &_main {
+                    margin-top: 7px;
+                }
+
+                &_img {
+                    width: 88px;
+                    height: 88px;
+                    margin-right: 48px;
+                }
+
+                &_title {
+                    margin-bottom: 10px;
+                    @include font_styles('Exo 2', 600, 20px, 135%, $title_color);
+                }
+
+                &_desc {
+                    max-width: 100%;
+                    @include font_styles('PT Sans', 400, 16px, 150%, $desc_color)
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .useful_bottom {
+        .container {
+            padding: 0 15px;
+        }
+
+        &_list {
+            row-gap: 38px;
+
+            &_item {
+                max-width: 337px;
+                min-height: 70px;
+                display: flex;
+
+                &_main {
+                    margin: 0;
+                }
+
+                &_img {
+                    width: 52px;
+                    height: 52px;
+                    margin-right: 16px;
+                }
+
+                &_title {
+                    margin-bottom: 12px;
+                    font-size: 18px;
+                }
+
+                &_desc {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
