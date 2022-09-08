@@ -1,0 +1,99 @@
+.contacts {
+
+  &_action {
+    margin-top: 72px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_main {
+    margin-top: 130px;
+
+    &_title {
+      @include font_styles($title_font, 600, 48px, 125%, $title_color);
+    }
+  }
+
+  &_list {
+    width: 248px;
+    margin-top: 22px;
+    display: grid;
+    gap: 44px;
+  }
+
+  &_item {
+    display: flex;
+
+    &_main {
+      margin-left: 32px;
+    }
+
+    &_title {
+      margin-bottom: 8px;
+      @include font_styles($desc_font, 400, 14px, 150%, $desc_color);
+    }
+
+    &_desc {
+      @include font_styles($title_font, 600, 20px, 24px, $title_color);
+    }
+  }
+
+  &_table {
+    width: 100%;
+    max-width: 794px;
+    padding: 40px 72px 56px 48px;
+    border-collapse: separate;
+    background: #F9F9FB;
+    border-radius: 5px;
+
+    tr {
+      width: 100%;
+      height: 31px;
+    }
+
+    &_main {
+      display: flex;
+      width: 100%;
+    }
+
+    &_title {
+      max-width: 175px;
+      margin-right: 56px;
+      @include font_styles($desc_font, 400, 16px, 125%, $desc_color);
+    }
+
+    &_desc {
+      width: 100%;
+      @include font_styles($title_font, 600, 16px, 125%, $title_color);
+    }
+  }
+}
+
+@media only screen and (max-width: 1238px) {
+  .contacts {
+
+    .container {
+      padding: 0 15px;
+    }
+
+    &_action {
+      margin-top: 64px;
+      display: grid;
+      gap: 64px;
+    }
+
+    &_main {
+      margin-top: 100px;
+
+      &_title {
+        font-size: 44px;
+      }
+    }
+
+    &_table {
+      max-width: 690px;
+      min-height: 468px;
+      padding: 40px 38px 48px 24px;
+    }
+  }
+}
