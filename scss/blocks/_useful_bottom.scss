@@ -3,8 +3,8 @@
         max-width: 1054px;
         margin: 72px auto 0px auto;
         display: grid;
-        grid-template-columns: repeat(2, 447px);
-        grid-template-rows: repeat(2, 80px);
+        grid-template-columns: repeat(2, max-width 447px);
+        grid-template-rows: repeat(2, min-height 80px);
         justify-content: space-between;
         row-gap: 62px;
 
@@ -41,8 +41,8 @@
         &_list {
             margin: 0;
             margin-top: 49px;
-            grid-template-columns: repeat(1, 530px);
-            grid-template-rows: repeat(4, 88px);
+            grid-template-columns: repeat(1, max-width 530px);
+            grid-template-rows: repeat(4, min-height 88px);
             justify-content: none;
             row-gap: 48px;
 
@@ -94,7 +94,7 @@
                 }
 
                 &_img {
-                    width: 52px;
+                    max-width: 52px;
                     height: 52px;
                     margin-right: 16px;
                 }

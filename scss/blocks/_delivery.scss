@@ -1,0 +1,141 @@
+.delivery {
+  &_main {
+    margin-top: 120px;
+    margin-bottom: 48px;
+
+    &_title {
+      @include font_styles($title_font, 600, 48px, 125%, $title_color);
+    }
+  }
+
+  &_list {
+    max-width: 1183px;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(1, max-width 1183px);
+    grid-template-rows: repeat(3, min-height 245px);
+    gap: 24px;
+  }
+
+  &_item {
+    width: 100%;
+    min-height: 245px;
+    padding: 32px 10px 32px 96px;
+    display: flex;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+
+    &_img {
+      max-width: 331px;
+      height: 181px;
+    }
+
+    &_main {
+      margin-left: 56px;
+
+      &_title {
+        @include font_styles($title_font, 600, 20px, 125%, $title_color);
+      }
+
+      &_underline {
+        width: 86px;
+        height: 3px;
+        margin-top: 21px;
+        background-color: $underline_color;
+      }
+
+      &_desc {
+        max-width: 568px;
+        margin-top: 24px;
+        @include font_styles($desc_font, 400, 16px, 150%, $desc_color);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .delivery {
+
+    .container {
+      padding: 0 39px;
+    }
+
+    &_main {
+      margin-top: 88px;
+
+      &_title {
+        font-size: 44px;
+      }
+    }
+
+    &_list {
+      margin-left: 49px;
+      grid-template-columns: repeat(1, max-width 1183px);
+      gap: 16px;
+    }
+
+    &_item {
+      width: 100%;
+      min-height: 245px;
+      padding: 40px 10px 10px 79px;
+      display: flex;
+
+      &_img {
+        display: none;
+      }
+
+      &_main {
+        margin: 0;
+
+        &_desc {
+          max-width: 492px;
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .delivery {
+
+    .container {
+      padding: 0 15px;
+    }
+
+    &_main {
+      margin-top: 64px;
+
+      &_title {
+        font-size: 28px;
+      }
+    }
+
+    &_list {
+      margin-left: 33px;
+      grid-template-rows: repeat(3, min-height 176px);
+      gap: 14px;
+    }
+
+    &_item {
+      min-height: 176px;
+      padding: 24px 22px 32px 43px;
+      display: flex;
+
+      &_main {
+        &_title {
+          font-size: 18px;
+        }
+
+        &_underline {
+          display: none;
+        }
+
+        &_desc {
+          // max-width: 241px;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+}
